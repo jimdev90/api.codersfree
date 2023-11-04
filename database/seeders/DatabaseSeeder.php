@@ -23,9 +23,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Storage::deleteDirectory('posts');
-
-        Storage::makeDirectory('posts');
+        Storage::deleteDirectory('public/posts');
+        Storage::makeDirectory('public/posts');
 
         $this->call(UserSeeder::class);
         Category::factory(4)->create();
